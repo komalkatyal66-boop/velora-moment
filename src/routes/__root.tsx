@@ -82,6 +82,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "twitter:site", content: "@Lovable" },
       { name: "twitter:title", content: "Lovable App" },
       { name: "twitter:description", content: "Velora Dreams is a hyper-realistic luxury restaurant and café website." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/11334cea-d314-4570-9696-c824803af4af/id-preview-2fba2bb7--c3524bb7-a298-4133-b11f-245c8cfc5ebc.lovable.app-1778917163792.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/11334cea-d314-4570-9696-c824803af4af/id-preview-2fba2bb7--c3524bb7-a298-4133-b11f-245c8cfc5ebc.lovable.app-1778917163792.png" },
     ],
     links: [
       {
