@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { FaPhoneAlt, FaWhatsapp, FaEnvelope, FaMapMarkerAlt, FaInstagram, FaConcierge } from "react-icons/fa";
+import { FaPhoneAlt, FaWhatsapp, FaEnvelope, FaMapMarkerAlt, FaInstagram, FaConciergeBell } from "react-icons/fa";
 
 const channels = [
   {
