@@ -7,6 +7,7 @@ const links = [
   { label: "Gallery", href: "#gallery" },
   { label: "Events", href: "#events" },
   { label: "Reserve", href: "#reserve" },
+  { label: "Contact", href: "#contact" },
 ];
 
 export function Navbar() {

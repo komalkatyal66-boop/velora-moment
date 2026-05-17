@@ -10,6 +10,7 @@ import { Gallery } from "@/components/velora/Gallery";
 import { Reservation } from "@/components/velora/Reservation";
 import { Testimonials } from "@/components/velora/Testimonials";
 import { Events } from "@/components/velora/Events";
+import { Contact } from "@/components/velora/Contact";
 import { Footer } from "@/components/velora/Footer";
 import { Toaster } from "@/components/ui/sonner";
 
@@ -42,6 +43,7 @@ function Index() {
         <Events />
         <Testimonials />
         <Reservation />
+        <Contact />
       </main>
       <Footer />
       <Toaster theme="dark" position="bottom-center" />

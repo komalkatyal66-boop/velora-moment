@@ -1,11 +1,17 @@
 import { useRef, useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import coffee from "@/assets/menu-coffee.jpg";
+import coffee2 from "@/assets/menu-coffee-2.jpg";
 import breakfast from "@/assets/menu-breakfast.jpg";
+import breakfast2 from "@/assets/menu-breakfast-2.jpg";
 import dessert from "@/assets/menu-dessert.jpg";
+import dessert2 from "@/assets/menu-dessert-2.jpg";
 import signature from "@/assets/menu-signature.jpg";
+import signature2 from "@/assets/menu-signature-2.jpg";
 import mocktail from "@/assets/menu-mocktail.jpg";
+import mocktail2 from "@/assets/menu-mocktail-2.jpg";
 import rooftop from "@/assets/menu-rooftop.jpg";
+import rooftop2 from "@/assets/menu-rooftop-2.jpg";
 
 type Item = { name: string; price: string; note: string; img: string };
 type Cat = { id: string; title: string; items: Item[] };
@@ -18,6 +24,9 @@ const categories: Cat[] = [
       { name: "Velora Reserve Espresso", price: "$9", note: "Single-origin Ethiopian, slow extracted.", img: coffee },
       { name: "Golden Honey Latte", price: "$11", note: "Manuka honey, oat milk, edible gold dust.", img: coffee },
       { name: "Smoked Maple Mocha", price: "$12", note: "Applewood-smoked chocolate, maple foam.", img: coffee },
+      { name: "Kyoto Iced Drip", price: "$10", note: "8-hour slow drip, single-origin Geisha.", img: coffee2 },
+      { name: "Burnt Vanilla Cortado", price: "$10", note: "Charred Madagascar vanilla, velvet milk.", img: coffee2 },
+      { name: "Cardamom Rose Cappuccino", price: "$11", note: "Persian rose, green cardamom, micro foam.", img: coffee2 },
     ],
   },
   {
@@ -27,6 +36,9 @@ const categories: Cat[] = [
       { name: "Truffle Egg Toast", price: "$18", note: "Black truffle, poached eggs, sourdough.", img: breakfast },
       { name: "Avocado Saffron Bowl", price: "$16", note: "Saffron yogurt, pomegranate, micro-herbs.", img: breakfast },
       { name: "Wagyu Breakfast Sliders", price: "$24", note: "A5 wagyu, brioche, aged gruyère.", img: breakfast },
+      { name: "Smoked Salmon Royale", price: "$22", note: "House-cured salmon, osetra, brioche.", img: breakfast2 },
+      { name: "Burrata & Heirloom Toast", price: "$19", note: "Puglian burrata, tomato confit, basil oil.", img: breakfast2 },
+      { name: "Crab Benedict Royale", price: "$26", note: "King crab, yuzu hollandaise, English muffin.", img: breakfast2 },
     ],
   },
   {
@@ -36,6 +48,9 @@ const categories: Cat[] = [
       { name: "Molten Gold Fondant", price: "$15", note: "70% dark chocolate, 24k gold leaf.", img: dessert },
       { name: "Yuzu Crème Brûlée", price: "$14", note: "Japanese yuzu, vanilla bean caramel.", img: dessert },
       { name: "Hazelnut Praline Tart", price: "$13", note: "Piedmont hazelnuts, salted caramel.", img: dessert },
+      { name: "Matcha Raspberry Verrine", price: "$14", note: "Uji matcha cream, raspberry, gold shard.", img: dessert2 },
+      { name: "Black Sesame Mille-Feuille", price: "$15", note: "Caramelized puff, black sesame cremeux.", img: dessert2 },
+      { name: "Pistachio Saffron Kulfi", price: "$13", note: "Slow-churned, Iranian saffron, rose petals.", img: dessert2 },
     ],
   },
   {
@@ -45,6 +60,9 @@ const categories: Cat[] = [
       { name: "A5 Wagyu Ribeye", price: "$94", note: "48-hour aged, charcoal seared, gold dust.", img: signature },
       { name: "Miso Glazed Black Cod", price: "$52", note: "Three-day marinade, yuzu butter.", img: signature },
       { name: "Truffle Risotto Nero", price: "$46", note: "Squid ink, Périgord truffle, parmigiano.", img: signature },
+      { name: "Seared Hokkaido Scallops", price: "$58", note: "Saffron foam, edible blossoms, brown butter.", img: signature2 },
+      { name: "Charcoal Lamb Rack", price: "$72", note: "Aged 21 days, smoked rosemary jus.", img: signature2 },
+      { name: "Lobster Thermidor Royale", price: "$88", note: "Whole Maine lobster, cognac cream, gruyère.", img: signature2 },
     ],
   },
   {
@@ -54,6 +72,9 @@ const categories: Cat[] = [
       { name: "Velvet Saffron Sour", price: "$13", note: "Saffron, yuzu, smoked rosemary.", img: mocktail },
       { name: "Ember Glow Spritz", price: "$12", note: "Blood orange, ginger, sparkling tea.", img: mocktail },
       { name: "Midnight Botanical", price: "$13", note: "Activated charcoal, elderflower, lime.", img: mocktail },
+      { name: "Smoked Cherry Coupe", price: "$14", note: "Bourbon-barrel cherry, applewood smoke.", img: mocktail2 },
+      { name: "Lychee Rose Fizz", price: "$12", note: "Lychee, Damask rose, pink peppercorn.", img: mocktail2 },
+      { name: "Hibiscus Pomegranate", price: "$12", note: "Wild hibiscus, pomegranate pearls, lime.", img: mocktail2 },
     ],
   },
   {
@@ -63,6 +84,9 @@ const categories: Cat[] = [
       { name: "Sunset Tasting Flight", price: "$68", note: "Five-course chef-curated journey.", img: rooftop },
       { name: "Smoke & Sky Platter", price: "$54", note: "Tableside smoke service, shared.", img: rooftop },
       { name: "Velora Caviar Service", price: "$120", note: "Imperial osetra, blini, crème fraîche.", img: rooftop },
+      { name: "Truffle Pasta Tableside", price: "$78", note: "White Alba truffle shaved at the table.", img: rooftop2 },
+      { name: "Skyline Champagne Tower", price: "$240", note: "Brut Rosé, six coupes, sparkler service.", img: rooftop2 },
+      { name: "Private Chef Omakase", price: "$185", note: "Nine courses, chef at your table.", img: rooftop2 },
     ],
   },
 ];
