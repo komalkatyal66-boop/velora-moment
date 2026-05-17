@@ -99,7 +99,7 @@ export function Contact() {
         >
           <div className="flex items-center gap-5">
             <div className="flex h-14 w-14 items-center justify-center rounded-full bg-gold/10 text-gold">
-              <FaConcierge className="text-xl" />
+              <FaConciergeBell className="text-xl" />
             </div>
             <div>
               <p className="text-[0.65rem] uppercase tracking-[0.35em] text-gold">
